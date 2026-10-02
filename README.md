@@ -13,6 +13,7 @@ Repositorio de estudio y referencia de Programación Orientada a Objetos, desarr
 | [`poo-completo.md`](poo-completo.md) | Guía de referencia con teoría, tablas y snippets para los temas de POO |
 | [`repaso-csharp-java.md`](repaso-csharp-java.md) | Repaso de fundamentos de programación comparando sintaxis entre C# y Java, previo a entrar de lleno a POO |
 | [`ejemplos/`](ejemplos/) | Archivos ejecutables, uno por tema, con ejemplos prácticos comentados |
+| [`ejemplos/repaso-csharp-java/`](ejemplos/repaso-csharp-java/) | 15 archivos `.java` ejecutables, uno por tema del repaso, con guía de ejecución incluida |
 
 ---
 
@@ -32,10 +33,14 @@ Abre [`poo-completo.md`](poo-completo.md) o [`repaso-csharp-java.md`](repaso-csh
 
 ### Ejecutar los ejemplos
 
-_Pendiente — se definirá según el lenguaje del temario._
+Los ejemplos del repaso están en Java y se pueden correr de dos formas:
+
+- **Desde un IDE (recomendado para alumnos):** abre el archivo `.java` en **IntelliJ IDEA** o **NetBeans** y ejecútalo con el botón de Run — el IDE ya trae su propio JDK, no necesitas instalar ni configurar nada extra.
+- **Desde la terminal (cmd):** sigue la guía paso a paso en [`ejemplos/repaso-csharp-java/COMO-EJECUTAR.md`](ejemplos/repaso-csharp-java/COMO-EJECUTAR.md).
 
 ```bash
-
+javac 03_TiposPrimitivos.java
+java TiposPrimitivos
 ```
 
 ---
@@ -44,6 +49,7 @@ _Pendiente — se definirá según el lenguaje del temario._
 
 - **Lenguajes:** C# y Java (comparativa) — el resto del temario de POO se definirá según avance el curso
 - **Paradigma:** Programación Orientada a Objetos
+- **IDE sugerido:** IntelliJ IDEA o NetBeans (cualquiera de los dos trae su propio JDK)
 - **Sin dependencias externas**
 
 ---
