@@ -36,7 +36,7 @@ Abre [`poo-completo.md`](poo-completo.md) o [`repaso-csharp-java.md`](repaso-csh
 Los ejemplos del repaso están en Java y se pueden correr de dos formas:
 
 - **Desde un IDE (recomendado para alumnos):** abre el archivo `.java` en **IntelliJ IDEA** o **NetBeans** y ejecútalo con el botón de Run — el IDE ya trae su propio JDK, no necesitas instalar ni configurar nada extra.
-- **Desde la terminal (cmd):** sigue la guía paso a paso en [`ejemplos/repaso-csharp-java/COMO-EJECUTAR.md`](ejemplos/repaso-csharp-java/COMO-EJECUTAR.md).
+- **Desde la terminal (cmd o PowerShell, por ejemplo la de VS Code):** sigue la guía paso a paso en [`ejemplos/repaso-csharp-java/COMO-EJECUTAR.md`](ejemplos/repaso-csharp-java/COMO-EJECUTAR.md) — incluye qué hacer si `javac` no se reconoce en ninguna de las dos terminales.
 
 ```bash
 javac 03_TiposPrimitivos.java
