@@ -1,6 +1,6 @@
-# Cómo ejecutar estos programas desde CMD
+# Cómo ejecutar estos programas desde la terminal
 
-Guía paso a paso para compilar y correr los ejemplos `.java` de esta carpeta usando la terminal **cmd.exe** de Windows.
+Guía paso a paso para compilar y correr los ejemplos `.java` de esta carpeta usando la terminal de Windows. Los comandos de las secciones 1 a 7 son para **cmd.exe**; si usas **PowerShell** (por ejemplo, la terminal integrada de VS Code), ve directo al [Apéndice B](#apéndice-b-usando-powershell-por-ejemplo-la-terminal-de-vs-code).
 
 ---
 
@@ -104,7 +104,7 @@ del *.class
 
 ---
 
-## Apéndice: Java no está en el PATH
+## Apéndice A: Java no está en el PATH (cmd)
 
 Si `javac -version` da error, significa que Windows no sabe dónde está el JDK instalado. Dos soluciones:
 
@@ -129,3 +129,53 @@ Si tienes IntelliJ IDEA instalado, ya trae un JDK empaquetado que puedes usar di
 ```
 
 Ajusta la ruta según la versión de IntelliJ instalada (`C:\Program Files\JetBrains\...\jbr\bin\`).
+
+---
+
+## Apéndice B: Usando PowerShell (por ejemplo, la terminal de VS Code)
+
+PowerShell es la terminal que abre VS Code por defecto en Windows — es distinta de `cmd.exe`, así que los mismos comandos a veces fallan o hay que escribirlos distinto.
+
+### El mismo error de "javac no se reconoce"
+
+Si ves:
+
+```
+javac : El término 'javac' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable.
+```
+
+Es el mismo problema del Apéndice A: no hay ningún JDK en el `PATH`. Las soluciones son equivalentes, pero la sintaxis de PowerShell cambia un poco:
+
+**Opción 1 — Ruta completa con el operador de llamada `&` (rápido, solo esta sesión):**
+
+En PowerShell, para ejecutar un programa cuya ruta tiene espacios y está entre comillas, hay que anteponer `&`:
+
+```powershell
+& "C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\jbr\bin\javac.exe" .\01_Consola.java
+& "C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\jbr\bin\java.exe" Consola
+```
+
+**Opción 2 — Agregar la carpeta al PATH solo para esta ventana de terminal:**
+
+```powershell
+$env:PATH += ";C:\Program Files\JetBrains\IntelliJ IDEA 2026.1\jbr\bin"
+javac .\01_Consola.java
+java Consola
+```
+
+Esto solo dura mientras esa ventana de PowerShell esté abierta; si la cierras, se pierde y hay que volver a ejecutarlo.
+
+**Opción 3 — Agregarlo al PATH de forma permanente:**
+
+Los pasos son los mismos que en el **Apéndice A, Opción A** (`sysdm.cpl` → Variables de entorno → `Path`) — eso aplica para cmd y PowerShell por igual, porque el `PATH` es una configuración de Windows, no de la terminal.
+
+> **Recomendación:** si vas a usar la terminal seguido (no solo el botón Run del IDE), lo más práctico a la larga es instalar un JDK normal (por ejemplo Eclipse Temurin u Oracle JDK) y agregarlo al PATH, en vez de depender de la ruta interna de IntelliJ — esa ruta cambia con cada versión del IDE.
+
+### Diferencias de sintaxis cmd vs PowerShell que te puedes topar
+
+| Acción | cmd.exe | PowerShell |
+|---|---|---|
+| Ejecutar un .exe con ruta completa entre comillas | `"ruta\al\programa.exe" args` | `& "ruta\al\programa.exe" args` |
+| Borrar archivos `.class` | `del *.class` | `Remove-Item *.class` (`del` también funciona, es un alias) |
+| Ver variable PATH actual | `echo %PATH%` | `$env:PATH` |
+| Variable de entorno temporal | `set VAR=valor` | `$env:VAR = "valor"` |
