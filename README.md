@@ -10,8 +10,10 @@ Repositorio de estudio y referencia de Programación Orientada a Objetos, desarr
 
 | Archivo | Descripción |
 |---|---|
-| [`poo-completo.md`](poo-completo.md) | Guía de referencia con teoría, tablas y snippets para los temas de POO |
-| [`repaso-csharp-java.md`](repaso-csharp-java.md) | Repaso de fundamentos de programación comparando sintaxis entre C# y Java, previo a entrar de lleno a POO |
+| [`poo-completo.md`](poo-completo.md) | Índice general que enlaza a todas las unidades del temario |
+| [`repaso-csharp-java.md`](repaso-csharp-java.md) | Unidades 1–2: repaso de fundamentos de programación comparando sintaxis entre C# y Java, previo a entrar de lleno a POO |
+| [`poo-unidad-3.md`](poo-unidad-3.md) | Unidad 3: POO — Fundamentos (clases, objetos, encapsulamiento, constructores, UML, buenas prácticas) |
+| [`poo-unidad-4.md`](poo-unidad-4.md) | Unidad 4: POO — Herencia y Polimorfismo (herencia, sobrecarga/sobreescritura, clases abstractas, interfaces, excepciones) |
 | [`ejemplos/`](ejemplos/) | Archivos ejecutables, uno por tema, con ejemplos prácticos comentados |
 | [`ejemplos/repaso-csharp-java/`](ejemplos/repaso-csharp-java/) | 15 archivos `.java` ejecutables, uno por tema del repaso, con guía de ejecución incluida |
 
@@ -19,9 +21,12 @@ Repositorio de estudio y referencia de Programación Orientada a Objetos, desarr
 
 ## Temas cubiertos
 
-| # | Tema | Archivo |
+| Unidad | Tema | Archivo |
 |---|---|---|
-| _Pendiente_ | _Se completa con el temario_ | — |
+| 1 | De C# a Java (consola, tipos, operadores, condicionales, iterativas, arreglos/listas, casting) | [`repaso-csharp-java.md`](repaso-csharp-java.md) |
+| 2 | Matrices y Métodos (declaración, recorrido con bucles anidados, parámetros y retorno, paso por valor/referencia) | [`repaso-csharp-java.md`](repaso-csharp-java.md) |
+| 3 | POO — Fundamentos (clases, objetos, atributos, métodos, encapsulamiento, constructores, UML, buenas prácticas) | [`poo-unidad-3.md`](poo-unidad-3.md) |
+| 4 | POO — Herencia y Polimorfismo (herencia, sobrecarga, sobreescritura, clases abstractas, interfaces, excepciones) | [`poo-unidad-4.md`](poo-unidad-4.md) |
 
 ---
 
@@ -47,7 +52,7 @@ java TiposPrimitivos
 
 ## Tecnologías
 
-- **Lenguajes:** C# y Java (comparativa) — el resto del temario de POO se definirá según avance el curso
+- **Lenguajes:** C# y Java (comparativa) en las unidades 1–2; Java a partir de la unidad 3, cuando entra de lleno la POO
 - **Paradigma:** Programación Orientada a Objetos
 - **IDE sugerido:** IntelliJ IDEA o NetBeans (cualquiera de los dos trae su propio JDK)
 - **Sin dependencias externas**
